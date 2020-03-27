@@ -1,0 +1,333 @@
+.btn {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to left, #226b96, #45b7f3);
+  color: #FFF;
+  text-transform: uppercase;
+  border-radius: 25px;
+  border: 0;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.slider {
+  position: absolute;
+  right: 30px;
+  top: 40%;
+}
+.slider li {
+  height: 13px;
+  width: 13px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  border: 1px solid #111;
+  cursor: pointer;
+}
+.slider li.active, .slider li:hover {
+  background-color: #226b96;
+  border-color: #226b96;
+}
+
+.main-header .container {
+  display: flex;
+}
+.main-header .container .brand-name {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to left, #226b96, #45b7f3);
+  font-size: 3rem;
+  color: white;
+  padding: 0 1rem;
+  letter-spacing: 3px;
+}
+.main-header .container .brand-name span {
+  min-height: 32px;
+  min-width: 32px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  margin-right: 3px;
+}
+.main-header .container .brand-name span:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 8px;
+  z-index: 10;
+}
+.main-header .container .header-navList {
+  flex: 2;
+  display: flex;
+}
+.main-header .container .header-navList li {
+  flex: 1;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.main-header .container .header-navList li:not(:last-of-type) {
+  margin-left: 10px;
+}
+.main-header .container .header-navList li:hover {
+  color: #226b96;
+  border-bottom: 1px solid #226b96;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial, tahoma, helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.main-footer {
+  margin-top: 2rem;
+  background-color: #333;
+  color: #FFF;
+  padding: 1rem;
+}
+.main-footer .container {
+  display: flex;
+}
+.main-footer .container .copyrights {
+  flex: 1;
+}
+.main-footer .container .author {
+  flex: 1;
+  text-align: right;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.showcase .container {
+  height: 100%;
+  position: relative;
+}
+.showcase .container .showcase-content {
+  background: url("../../../img/2.jpg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  color: #fff;
+  position: relative;
+  height: 100%;
+  padding-right: 10rem;
+}
+.showcase .container .showcase-content::before, .showcase .container .showcase-content::after {
+  content: "";
+  height: 100px;
+  width: 50%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+.showcase .container .showcase-content::before {
+  transform-origin: bottom left;
+  transform: skewY(6deg);
+  left: 0;
+}
+.showcase .container .showcase-content::after {
+  transform-origin: bottom right;
+  transform: skewY(-6deg);
+  right: 0;
+}
+.showcase .container .showcase-content p {
+  font-size: 1.2rem;
+}
+.showcase .container .showcase-content h2 {
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.showcase .container .showcase-content h2 span {
+  display: block;
+}
+.showcase .container .showcase-content a {
+  margin-top: 1rem;
+  width: 200px;
+}
+
+.about {
+  margin-top: 4rem;
+}
+.about .container {
+  display: flex;
+}
+.about .container .about__text {
+  flex: 1;
+  padding: 1rem;
+}
+.about .container .about__text h2 {
+  font-size: 2.5rem;
+  color: #226b96;
+}
+.about .container .about__text h3 {
+  font-size: 1.8rem;
+}
+.about .container .about__text p {
+  margin: 0.5rem 0 2rem;
+}
+.about .container .about__img {
+  flex: 1;
+  position: relative;
+}
+.about .container .about__img img {
+  max-width: 100%;
+}
+.about .container .about__img:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(34, 107, 150, 0.5);
+  z-index: 10;
+}
+
+.find-dealer {
+  margin-top: 8rem;
+}
+.find-dealer .container {
+  position: relative;
+  background-color: #226b96;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.find-dealer .container h3 {
+  font-size: 1.7rem;
+}
+.find-dealer .container p {
+  margin: 0.5rem 0;
+}
+.find-dealer .container a {
+  margin: 1rem;
+  border: 1px solid #fff;
+}
+.find-dealer .container::after, .find-dealer .container::before {
+  content: "";
+  height: 50px;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  background-color: #226b96;
+}
+.find-dealer .container:before {
+  left: 0;
+  transform-origin: bottom left;
+  transform: SkewY(-4deg);
+}
+.find-dealer .container:after {
+  transform-origin: bottom right;
+  transform: skewY(4deg);
+  right: 0;
+}
+
+.news {
+  margin-top: 4rem;
+}
+.news .container {
+  display: flex;
+}
+.news .container .news__text {
+  flex: 1;
+  padding-left: 2rem;
+}
+.news .container .news__text h2 {
+  font-size: 2.5rem;
+  color: #226b96;
+}
+.news .container .news__text h3 {
+  font-size: 1.8rem;
+}
+.news .container .news__text p {
+  margin: 0.5rem 0 2rem;
+}
+.news .container .news__img {
+  flex: 1;
+  position: relative;
+}
+.news .container .news__img img {
+  max-width: 100%;
+}
+
+.why {
+  margin-top: 5rem;
+}
+.why .container {
+  display: flex;
+}
+.why .container > div {
+  flex: 1;
+  margin: 1rem;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding-bottom: 2rem;
+}
+.why .container .box-1 img {
+  max-width: 100%;
+}
+.why .container .box-1 p {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}

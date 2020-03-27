@@ -1,0 +1,197 @@
+// Showcase Starts here
+.showcase {
+	.container {
+		height: 100%;
+		position: relative;
+		.showcase-content {
+			background: url('../../../img/2.jpg') no-repeat center center/cover;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-end;
+			text-align: right;
+			color: #fff;
+			position: relative;
+			height: 100%;
+			padding-right: 10rem;
+			&::before,
+			&::after {
+				content: "";
+				height: 100px;
+				width: 50%;
+				background-color: #fff;
+				position: absolute;
+				bottom: 0;
+				z-index: 10;
+			}
+			&::before {
+				transform-origin: bottom left;
+				transform: skewY(6deg);
+				left: 0;
+			}
+			&::after {
+				transform-origin: bottom right;
+				transform: skewY(-6deg);
+				right: 0;
+			}
+			p {
+				font: {
+					size: 1.2rem;
+				}
+			}
+			h2 {
+				font: {
+					size: 6rem;
+					weight: 800;
+				}
+				line-height: 1.1;
+				text-transform: uppercase;
+				span {
+					display: block;
+				}
+			}
+			a {
+				margin-top: 1rem;
+				width: 200px;
+			}
+		}
+	} // container Ends here
+}
+// Showcase Ends Here
+
+// About Starts here
+.about {
+	margin-top: 4rem;
+	.container {
+		display: flex;
+		.about__text {
+			flex: 1;
+			padding: 1rem;
+			h2 {
+				font-size: 2.5rem;
+				color: $mainColor;
+			}
+			h3 {
+				font-size: 1.8rem;
+			}
+			p {
+				margin: 0.5rem 0 2rem;
+			}
+		}
+
+		.about__img {
+			flex: 1;
+			position: relative;
+			img {
+				max-width: 100%;
+			}
+			&:after {
+				content: "";
+				@include overlay;
+			}
+		}
+	} // container ends here
+}
+// About Ends Here
+
+// find dealer Starts Here
+.find-dealer {
+	margin-top: 8rem;
+	.container {
+		position: relative;
+		background-color: $mainColor;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		@include flex(center, center);
+		height: 300px;
+		h3 {
+			font-size: 1.7rem;
+		}
+		p {
+			margin: 0.5rem 0;
+		}
+		a {
+			margin: 1rem;
+			border: 1px solid #fff;
+		}
+		&::after,
+		&::before {
+			content: "";
+			height: 50px;
+			width: 50%;
+			position: absolute;
+			top: 0;
+			background-color: $mainColor;
+		}
+		&:before {
+			left: 0;
+			transform-origin: bottom left;
+			transform: SkewY(-4deg);
+		}
+		&:after {
+			transform-origin: bottom right;
+			transform: skewY(4deg);
+			right: 0;
+		}
+	}
+}
+
+// find Dealer Ends Here
+
+// news Starts here
+.news {
+	margin-top: 4rem;
+	.container {
+		display: flex;
+		.news__text {
+			flex: 1;
+			padding-left: 2rem;
+			h2 {
+				font-size: 2.5rem;
+				color: $mainColor;
+			}
+			h3 {
+				font-size: 1.8rem;
+			}
+			p {
+				margin: 0.5rem 0 2rem;
+			}
+		}
+
+		.news__img {
+			flex: 1;
+			position: relative;
+			img {
+				max-width: 100%;
+			}
+		}
+	} // container ends here
+}
+// news Ends Here
+
+// Why starts here
+.why {
+	margin-top: 5rem;
+	.container {
+		display: flex;
+		> div {
+			flex: 1;
+			margin: 1rem;
+			text-align: center;
+			background-color: #f4f4f4;
+			padding-bottom: 2rem;
+		}
+		.box-1 {
+			img {
+				max-width: 100%;
+			}
+
+			p {
+				margin-top: .5rem;
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+}
+// Why ends here

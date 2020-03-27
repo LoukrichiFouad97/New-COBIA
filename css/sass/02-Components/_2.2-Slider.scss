@@ -1,0 +1,19 @@
+.slider {
+	position: absolute;
+	right: 30px;
+	top: 40%;
+
+	li {
+		height: 13px;
+		width: 13px;
+		margin-bottom: 5px;
+		border-radius: 50%;
+		border: 1px solid #111;
+		cursor: pointer;
+		&.active,
+		&:hover {
+			background-color: $mainColor;
+			border-color: $mainColor;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+.main-header {
+	.container {
+		display: flex;
+		.brand-name {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: linear-gradient(to left, $mainColor, $liteMainColor);
+			font-size: 3rem;
+			color: white;
+			padding: 0 1rem;
+			letter-spacing: 3px;
+			span {
+				min-height: 32px;
+				min-width: 32px;
+				background-color: #fff;
+				border-radius: 50%;
+				display: inline-block;
+				position: relative;
+				margin-right: 3px;
+				&:after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					border: {
+						style: solid;
+						color: #fff;
+						width: 8px;
+					}
+					z-index: 10;
+				}
+			}
+		}
+		.header-navList {
+      flex: 2;
+      display: flex;
+			li {
+        flex: 1;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+        display: flex;
+				@include flex(center, center);
+				@include prefixer(transition, all .4s ease, webkit moz);
+        // transition: border, color .4s ease;
+        &:not(:last-of-type) {
+          margin-left: 10px;
+        }
+        &:hover {
+          color: $mainColor;
+          border-bottom: 1px solid $mainColor;
+        }
+			}
+		}
+	}
+}

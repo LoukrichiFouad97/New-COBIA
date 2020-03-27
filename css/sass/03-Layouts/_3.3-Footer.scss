@@ -1,0 +1,16 @@
+.main-footer {
+	margin-top: 2rem;
+	background-color: #333;
+	color: #FFF;
+	padding: 1rem;
+	.container {
+		display: flex;
+		.copyrights {
+			flex:1;
+		}
+		.author {
+			flex: 1;
+			text-align: right;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font: {
+    family: arial, tahoma, helvetica, sans-serif;
+  }
+  line-height: 1.6;
+}
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: auto;
+	@media #{$minSmall} {
+		width: 750px;
+	}
+	@media #{$minMedium} {
+		width: 970px;
+	}
+	@media #{$minLarge} {
+		width: 1170px;
+	}
+}

@@ -1,0 +1,25 @@
+// flex alignment
+@mixin flex($justifyContent, $alignItems) {
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+// add vendors prefixes
+@mixin prefixer($property, $value, $vendors) {
+  @each $vendor in $vendors {
+    #{'-' + $vendor + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+
+// Overlay 
+@mixin overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba($mainColor, .5);
+  z-index: 10;
+}
